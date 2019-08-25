@@ -15,7 +15,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'valloric/youcompleteme'
 
 " ===================
 " end of plugins
