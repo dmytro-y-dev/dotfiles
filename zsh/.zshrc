@@ -27,7 +27,6 @@ unsetopt share_history
 
 # Set environment vars
 
-eval $(dircolors -b ~/.dircolors)
 alias ll='ls -aAlF'
 
 export VISUAL=nvim
@@ -43,11 +42,12 @@ alias phpunit=./vendor/bin/simple-phpunit
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs="vagrant ssh -- -t 'sudo /bin/bash'"
+
+alias dkr='docker-compose'
 
 alias aup='cd /mnt/B24803104802D351/ProjectAthena/Deployment; ./up.sh;'
 alias astop='cd /mnt/B24803104802D351/ProjectAthena/Deployment; ./stop.sh;'

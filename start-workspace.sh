@@ -2,13 +2,36 @@
 
 project=$1
 
-if [ "$project" = "as" ]; then
-  tmuxinator start athena-source
-elif [ "$project" = "ad" ]; then
-  tmuxinator start athena-deployment
-elif [ "$project" = "g" ]; then
-  tmuxinator start generic
+typeset -A subcmds
+subcmds=(
+  "as" "athena-source"
+  "ad" "athena-deployment"
+  "g" "generic"
+  "fokus" "fokus"
+)
+
+workspace_name() {
+  cmd=$1
+
+  for key val in ${(kv)subcmds}; do
+    if [ $key = $cmd ]; then
+      echo -n $val
+    fi
+  done
+}
+
+available_commands() {
+  for key val in ${(kv)subcmds}; do
+    echo "$key ($val)"
+  done
+}
+
+workspace=$(workspace_name $project)
+
+if [ ! -z $workspace ]; then
+  tmuxinator start $workspace 
 else
-  echo "Unknown project type $project specified as first argument. Check ~/start-workspace.sh for supported options.";
+  commands_=$(available_commands)
+  echo "Unknown project type \`$project\` is specified as first argument. Supported options:\n${commands_}";
 fi
 
