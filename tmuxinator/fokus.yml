@@ -49,7 +49,7 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - cd src/frontend/deploy
+        - cd src/frontend/web
         - cd src/frontend
-        - ;
-        - ;
+        - cd src/backend
+        - cd src/frontend

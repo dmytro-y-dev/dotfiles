@@ -32,7 +32,7 @@ alias ll='ls -aAlF'
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-alias sw="~/start-workspace.sh"
+alias work="~/start-workspace.sh"
 
 eval "$(hub alias -s)"
 
