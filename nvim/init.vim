@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'  " required
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
 Plugin 'airblade/vim-gitgutter'
 
