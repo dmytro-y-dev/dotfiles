@@ -27,7 +27,7 @@ unsetopt share_history
 
 # Set environment vars
 
-alias ll='ls -aAlF'
+alias ll='ls -ahAlF'
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
@@ -45,7 +45,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias vu='vagrant up'
 alias vh='vagrant halt'
-alias vs="vagrant ssh -- -t 'sudo /bin/bash'"
+alias vs="vagrant ssh -- -t 'sudo su -'"
 
 alias dkr='docker-compose'
 

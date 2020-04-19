@@ -1,7 +1,7 @@
 # /home/xanadu/.config/tmuxinator/fokus.yml
 
 name: Project Fokus 
-root: ~/Projects/fokus
+root: /media/xanadu/PROJECTS/fokus
 
 # Optional tmux socket
 # socket_name: foo
@@ -50,6 +50,6 @@ windows:
       # synchronize: after
       panes:
         - cd src/frontend/web
-        - cd src/frontend
-        - cd src/backend
+        - cd src/deploy
+        - cd src/deploy
         - cd src/frontend
