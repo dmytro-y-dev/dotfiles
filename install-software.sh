@@ -16,7 +16,9 @@ fi
 sudo cp ./nvim.appimage /usr/local/bin/nvim
 sudo ln -s /usr/local/bin/nvim /usr/bin/vim
 
-sudo apt install zsh zsh-antigen && \
+sudo curl -L git.io/antigen > /usr/local/antigen.zsh
+
+sudo apt install zsh && \
 sudo apt install silversearcher-ag ranger && \
 sudo apt install mycli && \
 sudo apt install tig && \
